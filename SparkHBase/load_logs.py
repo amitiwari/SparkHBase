@@ -19,7 +19,7 @@ def find_match(line):
         return (hostname,date_string,path,numBytes)
 
 inputs = sys.argv[1]
-output = sys.argv[2]
+output = sys.argv[2] 
 
 conf = SparkConf().setAppName('load logs')
 sc = SparkContext()

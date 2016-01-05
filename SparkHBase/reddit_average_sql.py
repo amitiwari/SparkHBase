@@ -16,11 +16,11 @@ conf = SparkConf().setAppName('reddit averages sql')
 sc = SparkContext()
 
 sqlContext = SQLContext(sc)
-
+ 
 schema = StructType([
     StructField('subreddit', StringType(), False),
     StructField('score', IntegerType(), False)
-])
+]) 
 
 comments = sqlContext.read.json(inputs, schema=schema)
 #averages = comments.select('subreddit', 'score').groupby('subreddit').avg()
